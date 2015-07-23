@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="myApplicationName">Integer Converter</string>
+	<string name="yes">OK</string>
+	<string name="calculate">Convert</string>
+</resources>

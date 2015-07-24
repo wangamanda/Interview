@@ -9,6 +9,8 @@ import android.view.View.OnClickListener;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Context;
+import android.view.inputmethod.InputMethodManager;
+import android.util.Log;
 
 public class MyActivity extends Activity{
 	@Override
@@ -17,6 +19,8 @@ public class MyActivity extends Activity{
 		final Context context = this;
 		setContentView(R.layout.activity_main);
 		final EditText editText = (EditText)findViewById(R.id.editText);
+		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
 		Button button = (Button)findViewById(R.id.button);
 		button.setOnClickListener(new View.OnClickListener(){
 		@Override
@@ -33,6 +37,7 @@ public class MyActivity extends Activity{
 					}
 				})
 				.show();
+				Log.d("Result", res);
 			}
 		});
 	}

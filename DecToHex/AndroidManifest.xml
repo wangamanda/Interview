@@ -10,7 +10,7 @@
 
 	<application android:icon="@drawable/mylogo"
 		     android:label="@string/myApplicationName">
-		<activity android:name="com.convert.package.MyActivity"
+		<activity android:name="MyActivity"
 			  android:label="@string/myApplicationName">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>

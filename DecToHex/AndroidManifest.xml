@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.convert.package1"
 	android:versionCode="1"
-	android:versionName="1.0">
+	android:versionName="">
 
-	<uses-sdk android:minSdkVersion="2"/>
+	<uses-sdk 
+		android:minSdkVersion="12"
+		android:targetSdkVersion="22"/>
 
 	<application android:icon="@drawable/mylogo"
 		     android:label="@string/myApplicationName">

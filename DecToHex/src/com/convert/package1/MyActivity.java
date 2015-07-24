@@ -4,15 +4,21 @@ import android.os.Bundle;
 import android.content.res.Resources;
 import android.widget.EditText;
 import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Context;
 
 public class MyActivity extends Activity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		final Context context = this;
 		setContentView(R.layout.activity_main);
-		EditText editText = (EditText)findViewById(R.id.editText);
+		final EditText editText = (EditText)findViewById(R.id.editText);
 		Button button = (Button)findViewById(R.id.button);
-		button.setOnClickListener(new View.OnClickListenter(){
+		button.setOnClickListener(new View.OnClickListener(){
 		@Override
 		public void onClick(View v) {
 			String s = editText.getText().toString();
@@ -28,7 +34,7 @@ public class MyActivity extends Activity{
 				})
 				.show();
 			}
-		})
+		});
 	}
 }
 
